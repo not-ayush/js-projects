@@ -9,67 +9,32 @@
   </head>
   <body>
     <div class="add-dailogue">
-      <form>
-        <label for="book-name">Book Name</label>
-        <input type="text" name="bookName" id="book-name" />
+        <form>
+          <h1>Add Book Details</h1>
+        <div>
+          <label for="book-name">Book Name</label>
+          <input type="text" name="bookName" id="book-name" />
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" />
+        </div>
+        <div>
+          <label for="pages">Pages</label>
+          <input type="number" name="pages" id="pages" />
+        </div>
+        <div>
+          <label for="read">Have you read this book?</label>
+          <input type="checkbox" name="read" id="read"/>
+        </div>
+        <button id="submit" class="add" name="submit">Add This Book!</button>
       </form>
     </div>
     <div class="header">
       <h1 class="logo">Library</h1>
-      <button class="add">Add book</button>
+      <button class="add" id="add">Add book</button>
     </div>
     <div class="books">
-      <div class="card">
-        <ul>
-          <li>
-            <span class="data-label">Topic: </span>
-            <span class="data">This Book Has a really really really really really really really really long name</span>
-          </li>
-          <li><span class="data-label">Pages: </span> <span class="data">100</span></li>
-          <li><span class="data-label">Author: </span> <span class="data">Name</span></li>
-          <li><span class="data-label">Status: </span> <span class="data">Read</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul>
-          <li><span class="data-label">Topic: </span> <span class="data">This Book</span></li>
-          <li><span class="data-label">Pages: </span> <span class="data">100</span></li>
-          <li><span class="data-label">Author: </span> <span class="data">Name</span></li>
-          <li><span class="data-label">Status: </span> <span class="data">Read</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul>
-          <li><span class="data-label">Topic: </span> <span class="data">This Book</span></li>
-          <li><span class="data-label">Pages: </span> <span class="data">100</span></li>
-          <li><span class="data-label">Author: </span> <span class="data">Name</span></li>
-          <li><span class="data-label">Status: </span> <span class="data">Read</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul>
-          <li><span class="data-label">Topic: </span> <span class="data">This Book</span></li>
-          <li><span class="data-label">Pages: </span> <span class="data">100</span></li>
-          <li><span class="data-label">Author: </span> <span class="data">Name</span></li>
-          <li><span class="data-label">Status: </span> <span class="data">Read</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul>
-          <li><span class="data-label">Topic: </span> <span class="data">This Book</span></li>
-          <li><span class="data-label">Pages: </span> <span class="data">100</span></li>
-          <li><span class="data-label">Author: </span> <span class="data">Name</span></li>
-          <li><span class="data-label">Status: </span> <span class="data">Read</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul>
-          <li><span class="data-label">Topic: </span> <span class="data">This Book</span></li>
-          <li><span class="data-label">Pages: </span> <span class="data">100</span></li>
-          <li><span class="data-label">Author: </span> <span class="data">Name</span></li>
-          <li><span class="data-label">Status: </span> <span class="data">Read</span></li>
-        </ul>
-      </div>
     </div>
   </body>
 </html>

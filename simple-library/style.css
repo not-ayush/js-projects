@@ -16,9 +16,9 @@ li {
 }
 
 :root {
-  --color-main: #F6F5F2;
-  --color-sec: #FFEFEF;
-  --color-acc: #F3D0D7;
+  --color-main: #f6f5f2;
+  --color-sec: #ffefef;
+  --color-acc: #f3d0d7;
   --color-dark-text: rgb(53, 53, 53);
   --color-normal-text: rgb(70, 70, 70);
 }
@@ -32,7 +32,7 @@ li {
   padding: 5px 15% 5px 15%;
 }
 
-button.add {
+button {
   padding: 15px 25px;
   border: 2px solid #6c3340;
   color: white;
@@ -42,15 +42,17 @@ button.add {
   cursor: pointer;
 }
 
-button.add:hover {
-  background-color: black;
-  color: white;
-  border: 2px solid black;
+button:hover {
+  background-color: white;
+  color: #6c3340;
+  border: 2px solid #6c3340;
+  box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.307);
 }
-button.add:active {
-  background-color: rgb(64, 64, 64);
+button:active {
+  background-color: #9b4a5d;
   color: white;
-  border: 2px solid black;
+  border: 2px solid white;
+  box-shadow: none;
 }
 
 .books {
@@ -61,19 +63,19 @@ button.add:active {
   margin: auto;
   padding: 30px 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
-  grid-auto-rows: 250px;
-  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  align-items: stretch;
   gap: 10px;
   overflow-y: auto;
+  z-index: 5;
 }
 
-
-
 .card {
-  padding: 40px 20px 20px 20px;
+  padding: 40px 20px 40px 20px;
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 280px;
   overflow-y: auto;
   justify-content: flex-start;
   align-items: first baseline;
@@ -81,6 +83,22 @@ button.add:active {
   border: 2px solid var(--color-acc);
   border-radius: 10px;
   font-size: 1.125rem;
+}
+
+.card > div {
+  display: flex;
+  padding-top: 30px;
+  gap: 10px;
+}
+
+.card button {
+  padding: 5px 8px;
+  font-size: 0.9rem;
+  border-color: var(--color-acc);
+  border-radius: 10px;
+  border-width: 2px;
+  color: var(--color-dark-text);
+  background-color: var(--color-main);
 }
 
 .data-label {
@@ -96,7 +114,60 @@ button.add:active {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: black;
-  opacity: 50%;
+  background-color: rgba(0, 0, 0, 0.408);
+  display: flex;
   display: none;
+  z-index: 10;
+}
+
+.add-dailogue > form {
+  margin: auto;
+  opacity: 1;
+  position: relative;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 40vw;
+  padding: 50px 0;
+  border-radius: 20px;
+  background-color: white;
+}
+
+label {
+  display: block;
+  color: var(--color-normal-text);
+  font-size: 1rem;
+}
+
+label[for="read"] {
+  display: inline;
+}
+
+input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  border: 2px solid rgb(189, 189, 189);
+  outline: none;
+  width: 300px;
+}
+
+input:focus {
+  border: 2px solid var(--color-acc);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  transform: scale(1.5);
+  margin: 10px;
+}
+
+#submit {
+  padding: 10px 20px;
+  margin-top: 10px;
 }
